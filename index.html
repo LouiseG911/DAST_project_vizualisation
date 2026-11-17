@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Titre de la page</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+  </head>
+  <body>
+    <div id="titre">
+        <p>Le Charme, une espèce ...</p>
+    </div>
+    <div id="carte-1">
+    <iframe
+        src="./CARTES_HTML/density_plot_dep.html"
+        title="Carte de densité par département"
+        loading="lazy"
+        style="width: 100%; height: 600px; border: 0;">
+    </iframe>
+    </div>
+    <div id="carte-2">
+        <iframe src="./CARTES_HTML/density_plot_ser.html"
+        title="Carte de densité par sylvoécorégion"
+        loading="lazy"
+        style="width: 100%; height: 600px; border: 0;">
+        </iframe>
+    </div>
+    <div id="carte-3">
+        <iframe src="./CARTES_HTML/biomass_placettes_by_department.html"
+        title="Biomasse moyenne et nombre de placettes par département"
+        loading="lazy"
+        style="width: 100%; height: 600px; border: 0;"></iframe>
+    </div>
+    <div id="reponse_model1">
+        <img src="GRAPH_PNG/response_model1.png" alt="Réponse du modèle 1" title="Réponse du modèle 1" width="300" height="200">
+    </div>
+    <div id="reponse_model2">
+        <img src="GRAPH_PNG/response_model2.png" alt="Réponse du modèle 2" title="Réponse du modèle 2" width="300" height="200">
+    </div>
+  </body>
+</html>
