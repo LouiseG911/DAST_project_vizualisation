@@ -123,9 +123,20 @@ body {
   gap: 20px;
   border-radius: 14px;
   padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 0;
+}
+
+.png-card {
+  min-width: 0;
+}
+
+.png-card iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+  border-radius: 10px;
+  background: white;
 }
 
 .png-card img {
