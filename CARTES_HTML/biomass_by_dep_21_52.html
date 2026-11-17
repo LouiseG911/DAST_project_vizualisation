@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"$schema": "https://vega.github.io/schema/vega/v6.json", "data": [{"name": "source_0", "values": [{"dep": 21, "year": 2010, "biom": 4522.716975908712}, {"dep": 21, "year": 2011, "biom": 3584.8350805262908}, {"dep": 21, "year": 2012, "biom": 3922.8408465369607}, {"dep": 21, "year": 2013, "biom": 4109.013910979376}, {"dep": 21, "year": 2014, "biom": 3169.5739352015253}, {"dep": 21, "year": 2015, "biom": 5137.895562549473}, {"dep": 21, "year": 2016, "biom": 2597.0773239750815}, {"dep": 21, "year": 2017, "biom": 4051.1835864003233}, {"dep": 21, "year": 2018, "biom": 3700.561723374166}, {"dep": 52, "year": 2010, "biom": 3362.1711241047933}, {"dep": 52, "year": 2011, "biom": 3611.407922090729}, {"dep": 52, "year": 2012, "biom": 3761.374866732388}, {"dep": 52, "year": 2013, "biom": 4071.194141906313}, {"dep": 52, "year": 2014, "biom": 3496.5374511025343}, {"dep": 52, "year": 2015, "biom": 4145.973189820468}, {"dep": 52, "year": 2016, "biom": 3724.240998112965}, {"dep": 52, "year": 2017, "biom": 3113.9085151183126}, {"dep": 52, "year": 2018, "biom": 3311.282897607269}, {"dep": 63, "year": 2010, "biom": 4645.6622427686625}, {"dep": 63, "year": 2011, "biom": 3333.4678193484137}, {"dep": 63, "year": 2012, "biom": 4016.1641298972177}, {"dep": 63, "year": 2013, "biom": 3397.33713845826}, {"dep": 63, "year": 2014, "biom": 3174.833388220133}, {"dep": 63, "year": 2015, "biom": 2919.643839870475}, {"dep": 63, "year": 2016, "biom": 2554.952627110249}, {"dep": 63, "year": 2017, "biom": 5315.075750144351}, {"dep": 63, "year": 2018, "biom": 6709.041960988545}]}, {"name": "data_0", "values": [{"biom": 4522.716975908712, "dep": 21, "year": 2010}, {"biom": 3584.8350805262908, "dep": 21, "year": 2011}, {"biom": 3922.8408465369607, "dep": 21, "year": 2012}, {"biom": 4109.013910979376, "dep": 21, "year": 2013}, {"biom": 3169.5739352015253, "dep": 21, "year": 2014}, {"biom": 5137.895562549473, "dep": 21, "year": 2015}, {"biom": 2597.0773239750815, "dep": 21, "year": 2016}, {"biom": 4051.1835864003233, "dep": 21, "year": 2017}, {"biom": 3700.561723374166, "dep": 21, "year": 2018}, {"biom": 3362.1711241047933, "dep": 52, "year": 2010}, {"biom": 3611.407922090729, "dep": 52, "year": 2011}, {"biom": 3761.374866732388, "dep": 52, "year": 2012}, {"biom": 4071.194141906313, "dep": 52, "year": 2013}, {"biom": 3496.5374511025343, "dep": 52, "year": 2014}, {"biom": 4145.973189820468, "dep": 52, "year": 2015}, {"biom": 3724.240998112965, "dep": 52, "year": 2016}, {"biom": 3113.9085151183126, "dep": 52, "year": 2017}, {"biom": 3311.282897607269, "dep": 52, "year": 2018}, {"biom": 4645.6622427686625, "dep": 63, "year": 2010}, {"biom": 3333.4678193484137, "dep": 63, "year": 2011}, {"biom": 4016.1641298972177, "dep": 63, "year": 2012}, {"biom": 3397.33713845826, "dep": 63, "year": 2013}, {"biom": 3174.833388220133, "dep": 63, "year": 2014}, {"biom": 2919.643839870475, "dep": 63, "year": 2015}, {"biom": 2554.952627110249, "dep": 63, "year": 2016}, {"biom": 5315.075750144351, "dep": 63, "year": 2017}, {"biom": 6709.041960988545, "dep": 63, "year": 2018}]}, {"name": "source_0_x_domain_year_0", "values": [{"year": 2010}, {"year": 2011}, {"year": 2012}, {"year": 2013}, {"year": 2014}, {"year": 2015}, {"year": 2016}, {"year": 2017}, {"year": 2018}]}, {"name": "data_0_x_domain_year_1", "values": [{"year": 2010}, {"year": 2011}, {"year": 2012}, {"year": 2013}, {"year": 2014}, {"year": 2015}, {"year": 2016}, {"year": 2017}, {"year": 2018}]}, {"name": "source_0_color_domain_dep_0", "values": [{"dep": 21}, {"dep": 52}, {"dep": 63}]}, {"name": "data_0_color_domain_dep_1", "values": [{"dep": 21}, {"dep": 52}, {"dep": 63}]}], "marks": [{"type": "group", "name": "layer_0_pathgroup", "from": {"facet": {"data": "source_0", "name": "faceted_path_layer_0_main", "groupby": ["dep"]}}, "encode": {"update": {"height": {"field": {"signal": null, "datum": null, "group": "height", "parent": null}}, "width": {"field": {"signal": null, "datum": null, "group": "width", "parent": null}}}}, "marks": [{"type": "line", "name": "layer_0_marks", "from": {"data": "faceted_path_layer_0_main"}, "sort": {"field": "x"}, "encode": {"update": {"x": {"field": "year", "scale": "x"}, "defined": {"signal": "isValid(datum[\"biom\"]) && isFinite(+datum[\"biom\"])"}, "y": {"field": "biom", "scale": "y"}, "stroke": {"field": "dep", "scale": "color"}, "tooltip": {"signal": "{\"Ann\u00e9e\": isValid(datum[\"year\"]) ? isArray(datum[\"year\"]) ? join(datum[\"year\"], '\\n') : datum[\"year\"] : \"\"+datum[\"year\"], \"D\u00e9partement\": isValid(datum[\"dep\"]) ? isArray(datum[\"dep\"]) ? join(datum[\"dep\"], '\\n') : datum[\"dep\"] : \"\"+datum[\"dep\"], \"Biomasse moyenne\": format(datum[\"biom\"], \".2f\")}"}}}, "style": ["line"]}]}, {"type": "symbol", "name": "layer_1_marks", "from": {"data": "data_0"}, "encode": {"update": {"tooltip": {"signal": "{\"Ann\u00e9e\": isValid(datum[\"year\"]) ? isArray(datum[\"year\"]) ? join(datum[\"year\"], '\\n') : datum[\"year\"] : \"\"+datum[\"year\"], \"D\u00e9partement\": isValid(datum[\"dep\"]) ? isArray(datum[\"dep\"]) ? join(datum[\"dep\"], '\\n') : datum[\"dep\"] : \"\"+datum[\"dep\"], \"Biomasse moyenne\": format(datum[\"biom\"], \".2f\")}"}, "y": {"field": "biom", "scale": "y"}, "x": {"field": "year", "scale": "x"}, "opacity": {"value": 1}, "fill": {"field": "dep", "scale": "color"}}}, "style": ["point"]}], "scales": [{"name": "x", "type": "point", "domain": {"fields": [{"data": "source_0_x_domain_year_0", "field": "year"}, {"data": "data_0_x_domain_year_1", "field": "year"}], "sort": true}, "range": [0, {"signal": "width"}], "padding": 0.5}, {"name": "y", "type": "linear", "domain": {"fields": [{"data": "source_0", "field": "biom"}, {"data": "data_0", "field": "biom"}]}, "range": [{"signal": "height"}, 0], "nice": true, "zero": true}, {"name": "color", "type": "ordinal", "domain": {"fields": [{"data": "source_0_color_domain_dep_0", "field": "dep"}, {"data": "data_0_color_domain_dep_1", "field": "dep"}], "sort": true}, "range": "category"}], "axes": [{"scale": "y", "domain": false, "grid": true, "aria": false, "zindex": 0, "tickCount": {"signal": "ceil(height/40)"}, "labels": false, "gridScale": "x", "maxExtent": 0, "ticks": false, "orient": "left", "minExtent": 0}, {"scale": "x", "labelBaseline": "middle", "zindex": 0, "orient": "bottom", "labelAlign": "right", "grid": false, "title": "Ann\u00e9e", "labelAngle": 270}, {"scale": "y", "zindex": 0, "grid": false, "labelOverlap": true, "orient": "left", "title": "Biomasse moyenne", "tickCount": {"signal": "ceil(height/40)"}}], "title": {"text": "Biomasse moyenne par ann\u00e9e, d\u00e9partements 21, 52 et 63", "frame": "group"}, "width": 700, "legends": [{"title": "D\u00e9partement", "stroke": "color", "symbolType": "circle", "fill": "color", "encode": {"symbols": {"update": {"opacity": {"value": 1}}}}}], "padding": 5, "background": "white", "height": 400, "style": "cell"};
+      var embedOpt = {"mode": "vega"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
