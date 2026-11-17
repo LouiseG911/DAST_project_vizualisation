@@ -18,7 +18,7 @@
         <p>the European hornbeam is a medium-sized deciduous broadleaf tree of the birch family. It is native to France and widespread across the country, except in the Mediterranean zone and at high altitude. It is most frequent in the northern half, especially Bassin Parisien, Lorraine, Alsace and the Centre region.</p>
         <p>In forest management, hornbeam is mostly seen as an understory species. It has a low commercial value compared to oak or beech. Its wood is hard to work, so it is mainly used as firewood. Foresters often keep it for its role in shading the trunks of the main trees and protecting the soil, rather than for its timber.</p>
         <p>The French National Forest Inventory is run by IGN. It monitors forest resources across mainland France, based on a systematic sampling grid of field plots that is renewed every year. On each plot, field teams record information on the stand and the environment, and measure the trees. The data are freely available as open data.
-    In this study, we only use the plots where hornbeam is present. All other plots are excluded from the analysis.</p>
+In this study, we only use the plots where hornbeam is present. All other plots are excluded from the analysis.</p>
       </div>
 
       <main class="content-grid">
@@ -46,6 +46,7 @@
 
         <section class="panel panel-graphs">
           <h2>What does the biomass data look like?</h2>
+          <p>Your turn ! Explore the data and see what you find.</p>
           <div class="biomass-charts-grid">
             <div class="graph-card">
               <iframe
@@ -65,30 +66,81 @@
         </section>
 
         <section id="reponses_modele" class="panel problem-panel">
-          <h2>Responses of the models</h2>
+          <h2>Comparison of two models to explain the absence of a relationship</h2>
           <p>Hornbeam is often seen as a minor companion species, but it may be more important than its low commercial value suggests. It is shade-tolerant, grows on a wide range of soils and is fairly tolerant of drought. These traits suggest that it could cope better with climate change than more sensitive species such as beech. We therefore ask whether hornbeam is a resilient companion species, and whether its presence helps maintain or even increase forest biomass under a changing climate.</p>
 
           <p>To explore this, we analyse two explanatory models of biomass, using climatic anomalies as explanatory variables. We test whether biomass differs in response to climatic anomalies where hornbeam is present. So we look for a link between climatic anomalies and biomass, and check whether this link changes when hornbeam is present in the stand.</p>
+          <div class="png-grid">
+            <div id="reponse_model1" class="png-card">
+              <img src="GRAPH_PNG/response_model1.png" title="Model 1 response" alt="Model 1 response">
+              <p>Model 1 predicts biomass based on climate anomalies.</p>
+            </div>
+            <div id="reponse_model2" class="png-card">
+              <img src="GRAPH_PNG/response_model2.png" title="Model 2 response" alt="Model 2 response">
+              <p>Model 2 predicts biomass based on climate anomalies and basal area.</p>
+            </div>
+          </div>
+          <p>No relationship was found between climate anomalies and biomass.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header id="titre" class="page-header">
+        <p>Le Charme, une espèce ...</p>
+      </header>
+
+      <div id="textes_presentation" class="page-intro">
+        <p>Présentation de l'espèce</p>
+        <p>Présentation des données</p>
+      </div>
+
+      <main class="content-grid">
+        <section class="panel panel-graphs">
+          <div id="cartes_densite" class="cards-grid">
+            <div id="carte-1" class="graph-card">
+              <iframe
+                src="CARTES_HTML/density_plot_dep.html"
+                title="Carte de densité par département"
+                loading="lazy">
+              </iframe>
+            </div>
+
+            <div id="carte-2" class="graph-card">
+              <iframe
+                src="CARTES_HTML/density_plot_ser.html"
+                title="Carte de densité par sylvoécorégion"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </section>
+
+        <section id="reponses_modele" class="panel problem-panel">
+          <h2>Problématique</h2>
+          <p>"..."</p>
 
           <div class="png-grid">
             <div id="reponse_model1" class="png-card">
-              <iframe
-                src="CARTES_HTML/response_model1.html"
-                title="Interactive predictions for model 1"
-                loading="lazy">
-              </iframe>
-              <p> Model center around climate anomalies </p>
+              <img src="GRAPH_PNG/response_model1.png" title="Réponse du modèle 1" alt="Réponse du modèle 1">
             </div>
             <div id="reponse_model2" class="png-card">
-              <iframe
-                src="CARTES_HTML/response_model2.html"
-                title="Interactive predictions for model 2"
-                loading="lazy">
-              </iframe>
-              <p> A better model with competition variable </p>
+              <img src="GRAPH_PNG/response_model2.png" title="Réponse du modèle 2" alt="Réponse du modèle 2">
             </div>
           </div>
-          <p>It is possible to consider that the hornbeam is a resilient species since there is no apparent link between biomass and climatic anomalies. </p>
         </section>
       </main>
     </div>
