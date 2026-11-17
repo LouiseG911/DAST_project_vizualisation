@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"$schema": "https://vega.github.io/schema/vega/v6.json", "data": [{"name": "param_1e9efca18e7a2868_store"}, {"name": "source_0", "values": [{"__count": 7183, "bin_maxbins_30_biom": 0.0, "bin_maxbins_30_biom_end": 5000.0}, {"__count": 1528, "bin_maxbins_30_biom": 5000.0, "bin_maxbins_30_biom_end": 10000.0}, {"__count": 595, "bin_maxbins_30_biom": 10000.0, "bin_maxbins_30_biom_end": 15000.0}, {"__count": 68, "bin_maxbins_30_biom": 20000.0, "bin_maxbins_30_biom_end": 25000.0}, {"__count": 232, "bin_maxbins_30_biom": 15000.0, "bin_maxbins_30_biom_end": 20000.0}, {"__count": 33, "bin_maxbins_30_biom": 25000.0, "bin_maxbins_30_biom_end": 30000.0}, {"__count": 4, "bin_maxbins_30_biom": 40000.0, "bin_maxbins_30_biom_end": 45000.0}, {"__count": 4, "bin_maxbins_30_biom": 35000.0, "bin_maxbins_30_biom_end": 40000.0}, {"__count": 12, "bin_maxbins_30_biom": 30000.0, "bin_maxbins_30_biom_end": 35000.0}, {"__count": 1, "bin_maxbins_30_biom": 70000.0, "bin_maxbins_30_biom_end": 75000.0}, {"__count": 1, "bin_maxbins_30_biom": 65000.0, "bin_maxbins_30_biom_end": 70000.0}]}, {"name": "source_0_y_domain___count", "values": [{"min": 1, "max": 7183}]}], "signals": [{"name": "bin_maxbins_30_biom_bins", "value": {"fields": ["biom"], "fname": "bin_biom", "start": 0.0, "step": 5000.0, "stop": 75000.0}}, {"name": "unit", "value": {}, "on": [{"events": "pointermove", "update": "isTuple(group()) ? group() : unit"}]}, {"name": "param_1e9efca18e7a2868", "update": "vlSelectionResolve(\"param_1e9efca18e7a2868_store\", \"union\")"}, {"name": "param_1e9efca18e7a2868_biom", "on": [{"events": [{"source": "view", "type": "dblclick"}], "update": "null"}, {"events": {"signal": "param_1e9efca18e7a2868_translate_delta"}, "update": "panLinear(param_1e9efca18e7a2868_translate_anchor.extent_x, -param_1e9efca18e7a2868_translate_delta.x / width)"}, {"events": {"signal": "param_1e9efca18e7a2868_zoom_delta"}, "update": "zoomLinear(domain(\"x\"), param_1e9efca18e7a2868_zoom_anchor.x, param_1e9efca18e7a2868_zoom_delta)"}]}, {"name": "param_1e9efca18e7a2868_tuple", "on": [{"events": [{"signal": "param_1e9efca18e7a2868_biom"}], "update": "param_1e9efca18e7a2868_biom ? {unit: \"\", fields: param_1e9efca18e7a2868_tuple_fields, values: [param_1e9efca18e7a2868_biom]} : null"}]}, {"name": "param_1e9efca18e7a2868_tuple_fields", "value": [{"field": "biom", "channel": "x", "type": "R"}]}, {"name": "param_1e9efca18e7a2868_translate_anchor", "value": {}, "on": [{"events": [{"source": "scope", "type": "pointerdown"}], "update": "{x: x(unit), y: y(unit), extent_x: domain(\"x\")}"}]}, {"name": "param_1e9efca18e7a2868_translate_delta", "value": {}, "on": [{"events": [{"source": "window", "between": [{"source": "scope", "type": "pointerdown"}, {"source": "window", "type": "pointerup"}], "consume": true, "type": "pointermove"}], "update": "{x: param_1e9efca18e7a2868_translate_anchor.x - x(unit), y: param_1e9efca18e7a2868_translate_anchor.y - y(unit)}"}]}, {"name": "param_1e9efca18e7a2868_zoom_anchor", "on": [{"events": [{"source": "scope", "type": "wheel", "consume": true}], "update": "{x: invert(\"x\", x(unit)), y: invert(\"y\", y(unit))}"}]}, {"name": "param_1e9efca18e7a2868_zoom_delta", "on": [{"events": [{"source": "scope", "consume": true, "type": "wheel"}], "update": "pow(1.001, event.deltaY * pow(16, event.deltaMode))", "force": true}]}, {"name": "param_1e9efca18e7a2868_modify", "on": [{"events": {"signal": "param_1e9efca18e7a2868_tuple"}, "update": "modify(\"param_1e9efca18e7a2868_store\", param_1e9efca18e7a2868_tuple, true)"}]}], "marks": [{"type": "rect", "name": "marks", "from": {"data": "source_0"}, "encode": {"update": {"x2": {"field": "bin_maxbins_30_biom", "scale": "x", "offset": {"signal": "0.5 + (abs(scale(\"x\", datum[\"bin_maxbins_30_biom_end\"]) - scale(\"x\", datum[\"bin_maxbins_30_biom\"])) < 0.25 ? -0.5 * (0.25 - (abs(scale(\"x\", datum[\"bin_maxbins_30_biom_end\"]) - scale(\"x\", datum[\"bin_maxbins_30_biom\"])))) : 0.5)"}}, "tooltip": {"signal": "{\"Number of plots\": format(datum[\"__count\"], \"\")}"}, "x": {"field": "bin_maxbins_30_biom_end", "scale": "x", "offset": {"signal": "0.5 + (abs(scale(\"x\", datum[\"bin_maxbins_30_biom_end\"]) - scale(\"x\", datum[\"bin_maxbins_30_biom\"])) < 0.25 ? 0.5 * (0.25 - (abs(scale(\"x\", datum[\"bin_maxbins_30_biom_end\"]) - scale(\"x\", datum[\"bin_maxbins_30_biom\"])))) : -0.5)"}}, "y": {"field": "__count", "scale": "y"}, "y2": {"value": 0, "scale": "y"}, "fill": {"value": "#4c78a8"}}}, "interactive": true, "clip": true, "style": ["bar"]}], "scales": [{"name": "x", "type": "linear", "domain": {"signal": "[bin_maxbins_30_biom_bins.start, bin_maxbins_30_biom_bins.stop]"}, "range": [0, {"signal": "width"}], "bins": {"signal": "bin_maxbins_30_biom_bins"}, "zero": false, "domainRaw": {"signal": "param_1e9efca18e7a2868[\"biom\"]"}}, {"name": "y", "type": "linear", "domain": [{"signal": "(data(\"source_0_y_domain___count\")[0] || {}).min"}, {"signal": "(data(\"source_0_y_domain___count\")[0] || {}).max"}], "range": [{"signal": "height"}, 0], "nice": true, "zero": true}], "axes": [{"scale": "y", "gridScale": "x", "grid": true, "zindex": 0, "labels": false, "minExtent": 0, "orient": "left", "aria": false, "domain": false, "tickCount": {"signal": "ceil(height/40)"}, "maxExtent": 0, "ticks": false}, {"scale": "x", "zindex": 0, "orient": "bottom", "grid": false, "title": "Biomass per plot", "tickCount": {"signal": "ceil(width/10)"}, "labelFlush": true, "labelOverlap": true}, {"scale": "y", "orient": "left", "tickCount": {"signal": "ceil(height/40)"}, "title": "Number of plots", "labelOverlap": true, "grid": false, "zindex": 0}], "title": {"text": "Distribution of Biomass per Plot", "frame": "group"}, "style": "cell", "width": 700, "background": "white", "height": 400, "padding": 5};
+      var embedOpt = {"mode": "vega"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

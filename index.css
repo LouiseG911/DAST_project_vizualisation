@@ -41,7 +41,8 @@ body {
   width: min(1400px, calc(100% - 32px));
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
   padding: 0 8px;
   color: #355070;
@@ -70,6 +71,12 @@ body {
 }
 
 .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.biomass-charts-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
@@ -131,6 +138,7 @@ body {
 
 @media (max-width: 900px) {
   .cards-grid,
+  .biomass-charts-grid,
   .png-grid {
     grid-template-columns: 1fr;
   }
