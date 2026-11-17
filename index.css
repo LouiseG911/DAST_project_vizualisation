@@ -1,4 +1,146 @@
-cartes_densite {
-    display: flex;
-    flex-direction: row;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #edf2f7;
+  color: #1f2a37;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 24px;
+}
+
+.page-header {
+  width: 100%;
+  background: #1d3557;
+  color: #ffffff;
+  padding: 36px 48px;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.16);
+}
+
+.page-header p {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.page-intro {
+  width: min(1400px, calc(100% - 32px));
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 8px;
+  color: #355070;
+  font-weight: 600;
+}
+
+.page-intro p {
+  margin: 0;
+}
+
+.content-grid {
+  width: min(1400px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-bottom: 40px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #dfe7ef;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  padding: 22px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.graph-card {
+  background: #f8fafc;
+  border: 1px solid #e1e8f0;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.graph-card iframe {
+  display: block;
+  width: 100%;
+  min-height: 600px;
+  height: 600px;
+  border: 0;
+  border-radius: 10px;
+  background: white;
+}
+
+.problem-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.problem-panel h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #243b53;
+}
+
+.problem-panel p {
+  margin: 0;
+  color: #334e68;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.png-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.png-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .cards-grid,
+  .png-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    padding: 28px 22px;
+  }
+
+  .page-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
